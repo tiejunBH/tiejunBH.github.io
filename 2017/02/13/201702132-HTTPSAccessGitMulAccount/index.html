@@ -43,7 +43,7 @@
 找到了HTTPS方式存储账户和密码的帮助
 找到了SSH方式存储账户和密码的帮助
 找到了SSH方式的多账户登录模式的帮助">
-<meta property="og:updated_time" content="2017-02-14T09:54:13.000Z">
+<meta property="og:updated_time" content="2017-02-14T10:18:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTPS访问方式的Git多账户登录">
 <meta name="twitter:description" content="问题缘由工作环境
@@ -197,23 +197,32 @@
 </ul>
 <h5 id="修改配置文件的方式"><a href="#修改配置文件的方式" class="headerlink" title="修改配置文件的方式"></a>修改配置文件的方式</h5><p>修改配置文件可以用<code>git config</code>命令，也可以直接修改配置文件，这里都是采用直接修改配置文件方式。</p>
 <h5 id="在仓库的local-config文件-git-config中存储账户和密码"><a href="#在仓库的local-config文件-git-config中存储账户和密码" class="headerlink" title="在仓库的local config文件.\.git\config中存储账户和密码"></a>在仓库的local config文件<code>.\.git\config</code>中存储账户和密码</h5><ul>
-<li>在仓库的本地配置文件中，是会存储仓库的远程地址的，在<code>[remote &quot;origin&quot;]</code>节中</li>
-<li><p>Git仓库的HTTPS访问地址中，是允许明文带账户名和密码的，格式如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yourname:password@git.coding.net/yourname/project.git</div></pre></td></tr></table></figure>
-<p>账户名和密码用<code>:</code>隔开；密码和地址用<code>@</code>隔开；</p>
+<li>在仓库的本地配置文件中，是会存储仓库的远程地址的，位置在<code>[remote &quot;origin&quot;]</code>节中</li>
+<li>Git仓库的HTTPS访问地址中，是允许明文带账户名和密码的，格式如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yourname:password@git.coding.net/yourname/project.git</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]</div><div class="line">  url = https://git.coding.net/tjBH/Git_WKP_TM.git</div><div class="line">  fetch = +refs/heads/*:refs/remotes/origin/*</div></pre></td></tr></table></figure>
+<p>其中，账户名和密码用<code>:</code>隔开；密码和地址用<code>@</code>隔开；<br>所以，处理的思路为：修改<code>[remote &quot;origin&quot;]</code>节，将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]</div><div class="line">  url = https://git.coding.net/tjBH/Git_WKP_TM.git</div><div class="line">  fetch = +refs/heads/*:refs/remotes/origin/*</div></pre></td></tr></table></figure></p>
 <p>改写如下：(假设账户名<code>tjBH</code>,密码<code>tjBHPwd</code>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]</div><div class="line">  url = https://tjBH:tjBHPwd@git.coding.net/tjBH/Git_WKP_TM.git</div><div class="line">  fetch = +refs/heads/*:refs/remotes/origin/*</div></pre></td></tr></table></figure></p>
 <p>通过这种方式，每个本地仓库再和远端进行数据交换时，就可以各自按照不同的账户登录了。<br>存在问题分析：</p>
 <ul>
 <li>不能一存多用，各仓库不能共享相同的账户和密码</li>
 <li>一旦修改密码，要修改的地方太多</li>
-<li>明文到处存储，不安全<br>继续改进！</li>
+<li>明文到处存储，不安全</li>
 </ul>
-<h5 id="在用户目录下的credentials文件-git-credentials中存储账户和密码"><a href="#在用户目录下的credentials文件-git-credentials中存储账户和密码" class="headerlink" title="在用户目录下的credentials文件.\.git-credentials中存储账户和密码"></a>在用户目录下的credentials文件<code>.\.git-credentials</code>中存储账户和密码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://tjBHC%40qq.com:tjBHCPwd@git.coding.net</div><div class="line">https://tjBHG%40qq.com:tjBHGPwd@github.com</div></pre></td></tr></table></figure>
+<p>继续改进！！！</p>
+<h5 id="在用户目录下的credentials文件-git-credentials中存储账户和密码"><a href="#在用户目录下的credentials文件-git-credentials中存储账户和密码" class="headerlink" title="在用户目录下的credentials文件.\.git-credentials中存储账户和密码"></a>在用户目录下的credentials文件<code>.\.git-credentials</code>中存储账户和密码</h5><p>打开<code>.\.git-credentials</code>文件，你的也许是空的，我设置好以后，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">https://tjBHC%40qq.com:tjBHCPwd@git.coding.net</div><div class="line">https://tjBHG%40qq.com:tjBHGPwd@github.com</div></pre></td></tr></table></figure></p>
+<p>应该看出来了，格式和上面一样，这里分别有了coding.net和github.com的1个账户和相应口令。<br><strong>！！！注意！！！</strong></p>
+<blockquote>
+<p>因为<code>@</code>是在这个格式中，是用来分割密码和访问地址的，<br>而这个例子里，账户名是邮箱格式的，其中包含了<code>@</code>，所以这里出现了<code>%40</code>来替代。</p>
+</blockquote>
+<p>把这里设置好以后，在需要默认账户登录的仓库的<code>.\.git\config</code>中，添加<code>[credential]</code>节，如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[credential]</div><div class="line">  helper = store</div></pre></td></tr></table></figure>
-<p>[credential]<br>  helper = store –file $HOME/.git-credentials-coding2.net<br>```</p>
+<p>这个意思是，本仓库的账户和口令到<code>.\.git-credentials</code>去匹配，<br>匹配的规则是使用<code>[remote &quot;origin&quot;]</code>节中的内容<br>例1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]</div><div class="line">  url = https://git.coding.net/tjBH/Git_WKP_TM.git</div><div class="line">  fetch = +refs/heads/*:refs/remotes/origin/*</div></pre></td></tr></table></figure>
+<p>例1中的匹配串就是<code>git.coding.net</code></p>
+<p>例2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[remote &quot;origin&quot;]</div><div class="line">  url = https://github.com/tjBH/Git_WKP_TM.git</div><div class="line">  fetch = +refs/heads/*:refs/remotes/origin/*</div></pre></td></tr></table></figure></p>
+<p>例2中的匹配串就是<code>github</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[credential]</div><div class="line">  helper = store --file $HOME/.git-credentials-coding2.net</div></pre></td></tr></table></figure>
 <h4 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h4><h4 id="进阶改进"><a href="#进阶改进" class="headerlink" title="进阶改进"></a>进阶改进</h4>  
 	</div>
 		<footer class="article-footer clearfix">
@@ -342,6 +351,10 @@
 			
 		
 			
+				<li><a href="/tags/各种规范/" title="各种规范">各种规范<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/前端/" title="前端">前端<sup>1</sup></a></li>
 			
 		
@@ -355,10 +368,6 @@
 		
 			
 				<li><a href="/tags/工作环境与工具/" title="工作环境与工具">工作环境与工具<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/各种规范/" title="各种规范">各种规范<sup>1</sup></a></li>
 			
 		
 			
