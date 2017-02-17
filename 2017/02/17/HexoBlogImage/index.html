@@ -22,7 +22,8 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 <meta property="og:image" content="http://yoursite.com/Logo-1.jpg">
 <meta property="og:image" content="http://yoursite.com/20170216-WordTableCrossPage/Logo-1.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/02/17/HexoBlogImage/Logo-1.jpg">
-<meta property="og:updated_time" content="2017-02-17T02:55:10.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/02/17/HexoBlogImage/Logo-1.jpg">
+<meta property="og:updated_time" content="2017-02-17T03:05:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客中的图片问题">
 <meta name="twitter:description" content="问题描述
@@ -107,7 +108,7 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案思路"><span class="toc-number">2.</span> <span class="toc-text">方案思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术资料"><span class="toc-number">3.</span> <span class="toc-text">技术资料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#速食资料"><span class="toc-number">3.1.</span> <span class="toc-text">速食资料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本环境"><span class="toc-number">4.</span> <span class="toc-text">版本环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-version命令显示结果："><span class="toc-number">4.1.</span> <span class="toc-text">hexo version命令显示结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程01-解决思路"><span class="toc-number">5.</span> <span class="toc-text">处理过程01: 解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程02-图片文件夹自动生成"><span class="toc-number">6.</span> <span class="toc-text">处理过程02: 图片文件夹自动生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程03-试试Hexo3以上版本是否不用额外安装插件"><span class="toc-number">7.</span> <span class="toc-text">处理过程03: 试试Hexo3以上版本是否不用额外安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程04-Markdown语法测试"><span class="toc-number">8.</span> <span class="toc-text">处理过程04: Markdown语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1张图片-OK"><span class="toc-number">8.1.</span> <span class="toc-text">第1张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-ERROR"><span class="toc-number">8.2.</span> <span class="toc-text">第2张图片 ERROR</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程05-标签插件语法测试"><span class="toc-number">9.</span> <span class="toc-text">处理过程05: 标签插件语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第3张图片-OK"><span class="toc-number">9.1.</span> <span class="toc-text">第3张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4张图片-ERROR"><span class="toc-number">9.2.</span> <span class="toc-text">第4张图片 ERROR</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案思路"><span class="toc-number">2.</span> <span class="toc-text">方案思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术资料"><span class="toc-number">3.</span> <span class="toc-text">技术资料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#速食资料"><span class="toc-number">3.1.</span> <span class="toc-text">速食资料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本环境"><span class="toc-number">4.</span> <span class="toc-text">版本环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-version命令显示结果："><span class="toc-number">4.1.</span> <span class="toc-text">hexo version命令显示结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程01-解决思路"><span class="toc-number">5.</span> <span class="toc-text">处理过程01: 解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程02-图片文件夹自动生成"><span class="toc-number">6.</span> <span class="toc-text">处理过程02: 图片文件夹自动生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程03-试试Hexo3以上版本是否不用额外安装插件"><span class="toc-number">7.</span> <span class="toc-text">处理过程03: 试试Hexo3以上版本是否不用额外安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程04-Markdown语法测试"><span class="toc-number">8.</span> <span class="toc-text">处理过程04: Markdown语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1张图片-OK"><span class="toc-number">8.1.</span> <span class="toc-text">第1张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-ERROR"><span class="toc-number">8.2.</span> <span class="toc-text">第2张图片 ERROR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-OK"><span class="toc-number">8.3.</span> <span class="toc-text">第2张图片 OK</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程05-标签插件语法测试"><span class="toc-number">9.</span> <span class="toc-text">处理过程05: 标签插件语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第3张图片-OK"><span class="toc-number">9.1.</span> <span class="toc-text">第3张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4张图片-ERROR"><span class="toc-number">9.2.</span> <span class="toc-text">第4张图片 ERROR</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -127,7 +128,11 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 </li>
 <li><p>效果<br><img src="Logo-1.jpg" alt="第1张图片"></p>
 </li>
-<li>最终生成的HTML<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;Logo-1.jpg&quot; alt=&quot;第1张图片&quot;&gt;</div><div class="line">https://tiejunbh.github.io/2017/02/17/HexoBlogImage/Logo-1.jpg</div></pre></td></tr></table></figure>
+<li><p>最终生成的HTML源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;Logo-1.jpg&quot; alt=&quot;第1张图片&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布后的HTML外链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://tiejunbh.github.io/2017/02/17/HexoBlogImage/Logo-1.jpg</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="第2张图片-ERROR"><a href="#第2张图片-ERROR" class="headerlink" title="第2张图片 ERROR"></a>第2张图片 ERROR</h3><ul>
@@ -136,7 +141,24 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 </li>
 <li><p>效果<br><img src="20170216-WordTableCrossPage/Logo-1.jpg" alt="第2张图片"></p>
 </li>
-<li>最终生成的HTML<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">![第2张图片](20170216-WordTableCrossPage/Logo-1.jpg)</div><div class="line">&lt;img src=&quot;20170216-WordTableCrossPage/Logo-1.jpg&quot; alt=&quot;第2张图片&quot;&gt;</div></pre></td></tr></table></figure>
+<li><p>最终生成的HTML源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;20170216-WordTableCrossPage/Logo-1.jpg&quot; alt=&quot;第2张图片&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布后的HTML外链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://tiejunbh.github.io/2017/02/17/HexoBlogImage/20170216-WordTableCrossPage/Logo-1.jpg</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="第2张图片-OK"><a href="#第2张图片-OK" class="headerlink" title="第2张图片 OK"></a>第2张图片 OK</h3><ul>
+<li><p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![第1张图片](/2017/02/17/HexoBlogImage/Logo-1.jpg)</div></pre></td></tr></table></figure>
+</li>
+<li><p>效果<br><img src="/2017/02/17/HexoBlogImage/Logo-1.jpg" alt="第1张图片"></p>
+</li>
+<li><p>最终生成的HTML源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;Logo-1.jpg&quot; alt=&quot;第1张图片&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布后的HTML外链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://tiejunbh.github.io/2017/02/17/HexoBlogImage/Logo-1.jpg</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="处理过程05-标签插件语法测试"><a href="#处理过程05-标签插件语法测试" class="headerlink" title="处理过程05: 标签插件语法测试"></a>处理过程05: 标签插件语法测试</h2><h3 id="第3张图片-OK"><a href="#第3张图片-OK" class="headerlink" title="第3张图片 OK"></a>第3张图片 OK</h3><ul>
@@ -145,7 +167,11 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 </li>
 <li><p>效果</p>
 <img src="/2017/02/17/HexoBlogImage/Logo-1.jpg" alt="第3张图片" title="第3张图片"></li>
-<li>最终生成的HTML<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img  Logo-1.jpg 第3张图片 %&#125;</div></pre></td></tr></table></figure>
+<li><p>最终生成的HTML源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;/2017/02/17/HexoBlogImage/Logo-1.jpg&quot; alt=&quot;第3张图片&quot; title=&quot;第3张图片&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布后的HTML外链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://tiejunbh.github.io/2017/02/17/HexoBlogImage/Logo-1.jpg</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="第4张图片-ERROR"><a href="#第4张图片-ERROR" class="headerlink" title="第4张图片 ERROR"></a>第4张图片 ERROR</h3><ul>
@@ -154,7 +180,11 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 </li>
 <li><p>效果</p>
 </li>
-<li>最终生成的HTML<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img  20170216-WordTableCrossPage/Logo-1.jpg 第4张图片 %&#125;</div></pre></td></tr></table></figure>
+<li><p>最终生成的HTML源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">出错啦，所以啥都没有</div></pre></td></tr></table></figure>
+</li>
+<li><p>发布后的HTML外链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">出错啦，所以啥都没有</div></pre></td></tr></table></figure>
 </li>
 </ul>
   
@@ -219,7 +249,7 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案思路"><span class="toc-number">2.</span> <span class="toc-text">方案思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术资料"><span class="toc-number">3.</span> <span class="toc-text">技术资料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#速食资料"><span class="toc-number">3.1.</span> <span class="toc-text">速食资料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本环境"><span class="toc-number">4.</span> <span class="toc-text">版本环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-version命令显示结果："><span class="toc-number">4.1.</span> <span class="toc-text">hexo version命令显示结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程01-解决思路"><span class="toc-number">5.</span> <span class="toc-text">处理过程01: 解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程02-图片文件夹自动生成"><span class="toc-number">6.</span> <span class="toc-text">处理过程02: 图片文件夹自动生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程03-试试Hexo3以上版本是否不用额外安装插件"><span class="toc-number">7.</span> <span class="toc-text">处理过程03: 试试Hexo3以上版本是否不用额外安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程04-Markdown语法测试"><span class="toc-number">8.</span> <span class="toc-text">处理过程04: Markdown语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1张图片-OK"><span class="toc-number">8.1.</span> <span class="toc-text">第1张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-ERROR"><span class="toc-number">8.2.</span> <span class="toc-text">第2张图片 ERROR</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程05-标签插件语法测试"><span class="toc-number">9.</span> <span class="toc-text">处理过程05: 标签插件语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第3张图片-OK"><span class="toc-number">9.1.</span> <span class="toc-text">第3张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4张图片-ERROR"><span class="toc-number">9.2.</span> <span class="toc-text">第4张图片 ERROR</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方案思路"><span class="toc-number">2.</span> <span class="toc-text">方案思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术资料"><span class="toc-number">3.</span> <span class="toc-text">技术资料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#速食资料"><span class="toc-number">3.1.</span> <span class="toc-text">速食资料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本环境"><span class="toc-number">4.</span> <span class="toc-text">版本环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-version命令显示结果："><span class="toc-number">4.1.</span> <span class="toc-text">hexo version命令显示结果：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程01-解决思路"><span class="toc-number">5.</span> <span class="toc-text">处理过程01: 解决思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程02-图片文件夹自动生成"><span class="toc-number">6.</span> <span class="toc-text">处理过程02: 图片文件夹自动生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程03-试试Hexo3以上版本是否不用额外安装插件"><span class="toc-number">7.</span> <span class="toc-text">处理过程03: 试试Hexo3以上版本是否不用额外安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程04-Markdown语法测试"><span class="toc-number">8.</span> <span class="toc-text">处理过程04: Markdown语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1张图片-OK"><span class="toc-number">8.1.</span> <span class="toc-text">第1张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-ERROR"><span class="toc-number">8.2.</span> <span class="toc-text">第2张图片 ERROR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2张图片-OK"><span class="toc-number">8.3.</span> <span class="toc-text">第2张图片 OK</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理过程05-标签插件语法测试"><span class="toc-number">9.</span> <span class="toc-text">处理过程05: 标签插件语法测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第3张图片-OK"><span class="toc-number">9.1.</span> <span class="toc-text">第3张图片 OK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4张图片-ERROR"><span class="toc-number">9.2.</span> <span class="toc-text">第4张图片 ERROR</span></a></li></ol></li></ol>
  
   </div>
 
@@ -305,11 +335,11 @@ Hexo博客中的图片问题考虑以后内容逐步增多，希望">
 			
 		
 			
-				<li><a href="/tags/Git-技术-测试/" title="Git 技术 测试">Git 技术 测试<sup>1</sup></a></li>
+				<li><a href="/tags/前端/" title="前端">前端<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/前端/" title="前端">前端<sup>1</sup></a></li>
+				<li><a href="/tags/Git-技术-测试/" title="Git 技术 测试">Git 技术 测试<sup>1</sup></a></li>
 			
 		
 			
